@@ -1,7 +1,6 @@
 const fs = require('fs');
 
 function fileHandler() {
-
   fs.open('02-write-file/02-write-text.txt', 'w', (err) => {
     if (err) throw err;
     console.log('Write text!');
