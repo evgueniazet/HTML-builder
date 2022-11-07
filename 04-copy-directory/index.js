@@ -9,7 +9,6 @@ const copyDir = () => {
     if (err) throw err;
 
     files.forEach(file => {
-      console.log('file', file);      
       fs.copyFile(`04-copy-directory/files/${file}`, `04-copy-directory/files-copy/${file}`, err => {
          if(err) throw err; 
       });
