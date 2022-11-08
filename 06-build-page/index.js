@@ -32,7 +32,7 @@ const copyDir = () => {
   });
 
 
-  fs.readdir('06-build-page/assets/fonts', (err, files) => {  // копирование папки fonts
+  fs.readdir('06-build-page/assets/fonts', (err, files) => { 
     if (err) throw err;
     files.forEach(file => {
       fs.copyFile(`06-build-page/assets/fonts/${file}`, `06-build-page/project-dist/assets/fonts/${file}`, err => {
@@ -42,7 +42,7 @@ const copyDir = () => {
   });
 
 
-  fs.readdir('06-build-page/assets/img', (err, files) => {  // копирование папки img
+  fs.readdir('06-build-page/assets/img', (err, files) => {  
     if (err) throw err;
     files.forEach(file => {
       fs.copyFile(`06-build-page/assets/img/${file}`, `06-build-page/project-dist/assets/img/${file}`, err => {
@@ -51,7 +51,7 @@ const copyDir = () => {
     })
   });
 
-  fs.readdir('06-build-page/assets/svg', (err, files) => {  // копирование папки svg
+  fs.readdir('06-build-page/assets/svg', (err, files) => { 
     if (err) throw err;
     files.forEach(file => {
       fs.copyFile(`06-build-page/assets/svg/${file}`, `06-build-page/project-dist/assets/svg/${file}`, err => {
@@ -112,8 +112,6 @@ const writeDataToFile = (filePath, data) => {
     });
   });
 };
-
-
 
 readFileAsync('06-build-page/template.html')
   .then(template => {
