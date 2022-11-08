@@ -136,7 +136,7 @@ readFileAsync('06-build-page/template.html')
           const filesArray = objArray.map((obj, index) => {
             obj.content = results[index];
             return obj;
-          });
+          });      
 
           filesArray.forEach((item) => {
             if (template.includes(item.name)) {
